@@ -1,0 +1,25 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:18px"> Movie: {{title}}</div>
+    <div class="panel-body">
+
+        <div *ngIf="movie" class="panel panel-info" style="border:none">
+            <div class="row">
+                <div class="panel panel-info col-md-12" style="border:none">
+                    <h4>{{movie.name}}  </h4> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-info col-md-4" style="border:none">
+                    <img [src]="movie.imageLink" width="150" height="200" />
+                </div>
+                <div class="col-md-8">
+
+                    <b>Director: </b> {{movie.director}} <br />
+                    <b>Writer: </b> {{movie.writer}} <br />
+                    <b>Description: </b> {{movie.description}} <br />
+                    <b>Release Date: </b> {{movie.releaseDate | date:'mediumDate'}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading"> {{title}}</div>
+    <div class="panel-body">
+
+        <div class="panel panel-info col-md-4" style="border:none">
+            <div class="panel-heading row" style="margin:5px" *ngFor="let category of movieCatogories">
+                <div style="cursor: pointer">
+                    <a [routerLink]="category.id" routerLinkActive="active"> {{category.name}} <i class="fa fa-angle-double-right pull-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
